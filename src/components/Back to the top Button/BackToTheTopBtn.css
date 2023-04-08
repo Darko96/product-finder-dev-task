@@ -1,0 +1,15 @@
+.back-to-top {
+  position: fixed;
+  width: 4.4rem;
+  height: 4.4rem;
+  bottom: 6.3rem;
+  right: 8.9rem;
+  background: transparent;
+  border-radius: 50%;
+  cursor: pointer;
+  border: 1px solid #000000;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

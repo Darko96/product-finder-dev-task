@@ -1,0 +1,25 @@
+.load-more__container {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 100.32rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 27rem;
+}
+
+.load-more__btn {
+  font-size: 2rem;
+  line-height: 2rem;
+  color: #007aff;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.9rem;
+  background: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
