@@ -1,11 +1,11 @@
 .phone-list-container {
   margin: 0 auto;
   width: 100%;
-  max-width: 100.32rem;
+  max-width: 144rem;
 
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  justify-content: space-between;
-  gap: 12rem;
+  justify-content: center;
+  gap: 10rem;
 }

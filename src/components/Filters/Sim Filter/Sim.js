@@ -21,9 +21,9 @@ const Sim = (props) => {
 
   return (
     <div className="filter">
-      <div className="filter__control">
-        <label className="filter__title">Sim:</label>
-        <select onChange={selectedSimHandler}>
+      <label className="filter__title">Sim:</label>
+      <div className="select__container">
+        <select className="select" onChange={selectedSimHandler}>
           <option value="choose">Choose SIM type</option>
           <option value="single sim">Single SIM</option>
           <option value="dual sim">Dual SIM</option>

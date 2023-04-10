@@ -15,14 +15,18 @@ const FilterList = (props) => {
     props.onSimFilter(simFilter);
   };
 
-  const addCameraFilter = (colorFilter) => {
-    props.onCameraFilter(colorFilter);
+  const addCameraFilter = (cameraFilter) => {
+    props.onCameraFilter(cameraFilter);
+  };
+
+  const addColorFilter = (colorFilter) => {
+    props.onColorFilter(colorFilter);
   };
 
   return (
     <div className="filter-list-container">
       <SortBy onAddSortedBy={addSortedBy} sortBy={arrayToSort} />
-      <Color />
+      <Color onAddColorFilter={addColorFilter} sortByColor={arrayToSort} />
       <Sim onAddSimFiler={addSimFilter} sortBySim={arrayToSort} />
       <MainCamera
         onAddCameraFilter={addCameraFilter}

@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import "./SortBy.css";
-
+import arrowDown from "../../../assets/icons/Polygon 5.png";
 const SortBy = (props) => {
   const [phonesArray, setPhonesArrays] = useState(props.sortBy);
   const [sortOption, setSortOption] = useState("");
@@ -28,13 +28,14 @@ const SortBy = (props) => {
 
   return (
     <div className="filter">
-      <div className="filter__control">
-        <label className="filter__title">Sort by:</label>
-        <select onChange={handleSort}>
+      <label className="filter__title">Sort by:</label>
+      <div className="select__container">
+        <select className="select" onChange={handleSort}>
           <option value="choose">Choose a way to sort</option>
           <option value="price">Price (High to Low)</option>
           <option value="camera">Camera (Hight to Low)</option>
         </select>
+        {/* <img src={arrowDown} alt="arrow down"></img> */}
       </div>
     </div>
   );

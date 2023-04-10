@@ -1,3 +1,24 @@
+.filter {
+  width: 100%;
+  max-width: 24.9rem;
+}
+
+.select__container {
+  display: flex;
+  align-items: center;
+}
+
+.select {
+  width: 100%;
+  background-color: #fff;
+  padding: 0.8rem 1.2rem;
+
+  font-weight: 100;
+  font-size: 1.4rem;
+  line-height: 2.2rem;
+  color: #000;
+}
+
 .filter__title {
   display: block;
   font-size: 1.8rem;

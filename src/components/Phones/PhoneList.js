@@ -6,8 +6,10 @@ import LoadMore from "../Load More Component/LoadMore";
 const PhoneList = (props) => {
   const [shouldLoadMore, setShouldLoadMore] = useState(false);
 
-  const filteredPhones = props.phones.filter((phone) =>
-    phone.model.toLowerCase().includes(props.search.toLowerCase())
+  const filteredPhones = props.phones.filter(
+    (phone) =>
+      phone.model.toLowerCase().includes(props.search.toLowerCase()) ||
+      phone.sim.toLowerCase().includes(props.search.toLowerCase())
   );
 
   const addLoadMore = (load) => {
@@ -48,11 +50,7 @@ const PhoneList = (props) => {
             url={phone.url}
           />
         ))}
-        {props.phones.length >= 6 ? (
-          <LoadMore load={addLoadMore} />
-        ) : (
-          <LoadMore style={{ display: "none" }} load={addLoadMore} />
-        )}
+        <LoadMore style={{ display: "none" }} load={addLoadMore} />
       </div>
     );
   } else {

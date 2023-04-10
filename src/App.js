@@ -179,13 +179,33 @@ const App = () => {
     setFilters((prevState) => ({ ...prevState, camera: camera }));
   };
 
-  console.log(filters);
+  const addColorFilterApp = (color) => {
+    setFilters((prevState) => ({ ...prevState, color: color }));
+  };
+
+  if (filters.color.length > 0) {
+    return (
+      <div className="App">
+        <Search onAddSearch={addSearchHandler} />
+        <FilterList
+          onColorFilter={addColorFilterApp}
+          onCameraFilter={addCameraFilterApp}
+          onSimFilter={addSimFilterApp}
+          onSortedByApp={addSortedByApp}
+          phones={DUMMY_PHONES}
+        />
+        <PhoneList search={phoneSearch} phones={filters.color} />
+        <BackToTopButton />
+      </div>
+    );
+  }
 
   if (filters.camera.length > 0) {
     return (
       <div className="App">
         <Search onAddSearch={addSearchHandler} />
         <FilterList
+          onColorFilter={addColorFilterApp}
           onCameraFilter={addCameraFilterApp}
           onSimFilter={addSimFilterApp}
           onSortedByApp={addSortedByApp}
@@ -202,6 +222,7 @@ const App = () => {
       <div className="App">
         <Search onAddSearch={addSearchHandler} />
         <FilterList
+          onColorFilter={addColorFilterApp}
           onCameraFilter={addCameraFilterApp}
           onSimFilter={addSimFilterApp}
           onSortedByApp={addSortedByApp}
@@ -218,6 +239,7 @@ const App = () => {
       <div className="App">
         <Search onAddSearch={addSearchHandler} />
         <FilterList
+          onColorFilter={addColorFilterApp}
           onCameraFilter={addCameraFilterApp}
           onSimFilter={addSimFilterApp}
           onSortedByApp={addSortedByApp}
@@ -233,6 +255,7 @@ const App = () => {
     <div className="App">
       <Search onAddSearch={addSearchHandler} />
       <FilterList
+        onColorFilter={addColorFilterApp}
         onCameraFilter={addCameraFilterApp}
         onSimFilter={addSimFilterApp}
         onSortedByApp={addSortedByApp}

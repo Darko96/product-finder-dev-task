@@ -28,7 +28,7 @@ const MainCamera = (props) => {
       setRegular(reg);
     } else if (event.target.value === "less") {
       const less = array.filter((phone) => {
-        if (phone.camera <= 48) {
+        if (phone.camera < 48) {
           return phone;
         }
       });
@@ -50,9 +50,9 @@ const MainCamera = (props) => {
 
   return (
     <div className="filter">
-      <div className="filter__control">
-        <label className="filter__title">Main Camera:</label>
-        <select onChange={selectedCameraHandler}>
+      <label className="filter__title">Main Camera:</label>
+      <div className="select__container">
+        <select className="select" onChange={selectedCameraHandler}>
           <option value="choose">Choose camera</option>
           <option value="more">More than 48MP</option>
           <option value="48">48MP</option>
